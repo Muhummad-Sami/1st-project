@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toyota Pakistan | Indus Motor Company</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        /* Color Theme */
+        :root {
+            --toyota-red: #eb0a1e;
+            --toyota-dark: #333333;
+            --toyota-light: #f5f5f5;
+            --toyota-gray: #777777;
+            --toyota-white: #ffffff;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: var(--toyota-white);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+         /* Navigation */
+        .navbar {
+            background-color: var(--toyota-red);
+            
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: var(--toyota-white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+        
+        
+        /* Main Content */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .section-title {
+            color: var(--toyota-red);
+            text-align: center;
+            margin: 30px 0;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            color: var(--toyota-dark);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-height: 500px;         
+            border-radius: 5px;
+            /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+            
+        }
+        
+        .feature-box {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        
+        .feature-item {
+            width: 30%;
+            min-width: 300px;
+            margin-bottom: 30px;
+            background: var(--toyota-white);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--toyota-dark);
+            color: var(--toyota-white);
+            padding: 40px 0 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        footer .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        footer .footer-column {
+            width: 23%;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        
+        footer .footer-column h3 {
+            color: var(--toyota-red);
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        footer .footer-column h4 {
+            color: #ccc;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        footer .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        footer .footer-column ul li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        footer .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer .footer-column ul li a:hover {
+            color: var(--toyota-white);
+            text-decoration: underline;
+        }
+        
+        footer .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        footer .copyright a {
+            color: var(--toyota-red);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer .copyright a:hover {
+            color: #ff3333;
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .feature-item, footer .footer-column {
+                width: 48%;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .feature-item, footer .footer-column {
+                width: 100%;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="project1.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="#">Corporate</a></li>
+                <li><a href="#">Information</a></li>
+                <li><a href="contact us .html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section>
+            <h1 class="section-title">Welcome To Toyota Pakistan</h1>
+            <img src="dp.jpg" alt="Toyota Pakistan Showroom" class="hero-image">
+        </section>
+        
+        <section>
+            <h2 class="section-title">The All New Corolla</h2>
+            <img src="pic7.jpg" alt="New Toyota Corolla" class="hero-image">
+        </section>
+        
+        <section>
+            <h2 class="section-title">Explore Your Ideal Toyota</h2>
+            <h3 class="subtitle">Move Your World</h3>
+            
+            <div class="feature-box">
+                <div class="feature-item">
+                    <img src="pic8.jpg" alt="Toyota Model 1">
+                    <h3>Model 1</h3>
+                    <p>Experience the perfect blend of performance and comfort.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="pic9.jpg" alt="Toyota Model 2">
+                    <h3>Model 2</h3>
+                    <p>Innovative design meets cutting-edge technology.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="pic10.jpg" alt="Toyota Model 3">
+                    <h3>Model 3</h3>
+                    <p>Unmatched reliability for your everyday journeys.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="section-title">Interior Functionality</h2>
+            <p class="subtitle">A Symbol Of Quality, Durability And Reliability</p>
+            
+            <div class="feature-box">
+                <div class="feature-item">
+                    <h3>Comfortable Seats</h3>
+                    <img src="pic11.jpg" alt="Toyota Interior Seats">
+                    <p>Premium materials designed for maximum comfort on every journey.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>Soft Steering</h3>
+                    <img src="pic12.jpg" alt="Toyota Steering Wheel">
+                    <p>Responsive steering for a smooth and controlled driving experience.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>Amazing Front Seats</h3>
+                    <img src="pic13.jpg" alt="Toyota Front Seats">
+                    <p>Ergonomic design that combines style with functionality.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="section-title">Interior Features</h2>
+            <div class="feature-box">
+                <div class="feature-item">
+                    <h3>Audio Control</h3>
+                    <img src="In1.jpg" alt="Audio Control">
+                    <p>Intuitive controls for your entertainment system.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Optitron Meter & MID Control</h3>
+                    <img src="In2.jpg" alt="Optitron Meter">
+                    <p>Advanced display for all your driving information.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Push Start</h3>
+                    <img src="in3.jpg" alt="Push Start">
+                    <p>Keyless ignition for modern convenience.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Enter Into Grace</h3>
+                    <img src="In4.jpg" alt="Interior View">
+                    <p>Luxurious interior that welcomes you in style.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Gear System</h3>
+                    <img src="In6.jpg" alt="Gear System">
+                    <p>Smooth transmission for optimal performance.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Steering & HD LCD</h3>
+                    <img src="In5.jpg" alt="Steering Wheel">
+                    <p>High-definition display integrated into your steering.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="section-title">Exterior Features</h2>
+            <div class="feature-box">
+                <div class="feature-item">
+                    <h3>Front Grill & Bumper</h3>
+                    <img src="Ex1.jpg" alt="Front Grill">
+                    <p>Bold design that makes a statement.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Rear Bumper</h3>
+                    <img src="Ex2.jpg" alt="Rear Bumper">
+                    <p>Stylish and functional rear protection.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Head Light With LED Fog Lamps</h3>
+                    <img src="Ex3.jpg" alt="Head Lights">
+                    <p>Advanced lighting for maximum visibility.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Auto Reverse Link Mode</h3>
+                    <img src="Ex4.jpg" alt="Reverse Mode">
+                    <p>Smart technology for safer reversing.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Auto Reverse Link Mirror</h3>
+                    <img src="Ex5.jpg" alt="Reverse Mirror">
+                    <p>Automatic mirror adjustment when reversing.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Smart Trunk Opener</h3>
+                    <img src="Ex6.jpg" alt="Trunk Opener">
+                    <p>Hands-free access to your trunk.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="section-title">Discover More From Toyota</h2>
+            <h3 class="subtitle">A Lifetime Of Value</h3>
+            
+            <div class="feature-box">
+                <div class="feature-item">
+                    <img src="pic17.jpg" alt="Toyota After Sales">
+                    <h3>Toyota After Sales</h3>
+                    <h4>Your car's lifeline</h4>
+                    <p>Comprehensive service packages to keep your Toyota running perfectly for years to come.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="pic18.jpg" alt="HEV Technology">
+                    <h3>HEV Technology</h3>
+                    <h4>A Promising Future</h4>
+                    <p>Hybrid Electric Vehicle technology that combines efficiency with performance.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="pic22.jpg" alt="Used Vehicles">
+                    <h3>Toyota Used Vehicles</h3>
+                    <h4>Explore Toyota Sure</h4>
+                    <p>Certified pre-owned vehicles with the reliability you expect from Toyota.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="pic33.jpg" alt="Toyota Logo" width="200">
+                    <p><strong>INDUS MOTOR CO., LTD.</strong><br>
+                    Plot No. N.W.Z/P-1, Port Qasim<br>
+                    Authority, Karachi, Pakistan</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>For Investors</h3>
+                    <ul>
+                        <li>Email: customer.relations@toyota-indus.com</li>
+                        <li>Phone: +92-21-34721100</li>
+                        <li>UAN: +92-111-86-96-82</li>
+                        <li>Fax: (021) 34720056</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <img src="pic34.jpg" alt="Social Media Icons" width="150">
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Showroom</h3>
+                    <h4>CARS & MPVS</h4>
+                    <ul>
+                        <li><a href="#">Corolla X</a></li>
+                        <li><a href="#">Yaris</a></li>
+                        <li><a href="#">Camry Hybrid</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>SUVS & PICKUPS</h3>
+                    <ul>
+                        <li><a href="#">Corolla Cross</a></li>
+                        <li><a href="#">Fortuner</a></li>
+                        <li><a href="#">Revo</a></li>
+                        <li><a href="#">Hilux E (Standard)</a></li>
+                        <li><a href="#">Hilux Single Cabin</a></li>
+                        <li><a href="#">Land Cruiser Prado</a></li>
+                        <li><a href="#">Land Cruiser 300</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>BUSES & VANS</h3>
+                    <ul>
+                        <li><a href="#">Hiace Deluxe</a></li>
+                        <li><a href="#">Hiace</a></li>
+                        <li><a href="#">Coaster</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>GAZOO RACING</h3>
+                    <ul>
+                        <li><a href="#">Fortuner GR-S</a></li>
+                        <li><a href="#">Revo GR-S</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>AFTER SALES</h3>
+                    <ul>
+                        <li><a href="#">Value Added Services</a></li>
+                        <li><a href="#">E Commerce Store</a></li>
+                        <li><a href="#">Toyota Genuine Parts</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Warranty Activation Portal</a></li>
+                        <li><a href="#">Customer Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <a href="privacy.html">Privacy Policy</a><br><br>
+                Copyright &copy; 2023 Indus Motor Company Ltd. All Rights Reserved<br>
+                Powered By Echo Digital
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
